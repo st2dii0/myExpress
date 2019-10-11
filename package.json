@@ -1,0 +1,26 @@
+{
+  "name": "myExpress",
+  "version": "1.0.0",
+  "description": "HTTP client server.",
+  "main": "index.js",
+  "scripts": {
+    "preStart": "tsc --esModuleInterop app.ts",
+    "Start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/st2dii0/myExpress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/st2dii0/myExpress/issues"
+  },
+  "homepage": "https://github.com/st2dii0/myExpress#readme",
+  "devDependencies": {
+    "@types/node": "^12.7.12",
+    "nodemon": "^1.19.3"
+  }
+}
