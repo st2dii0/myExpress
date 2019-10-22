@@ -27,13 +27,17 @@ class Express {
   listen(port: number, callback: () => void): void {
     this.server.listen(port, callback)
   }
-​
+
+
+  // Rendering  ​
+
   render(
     fileName: string,
     values: any,
     callback: (error: Error | null, html: string | null) => void
   ) {
     // set template filename
+    console.log('fezfezfzefz')
     const pathName = path.join(
       process.cwd(),
       this.WWW_DIRECTORY,
@@ -80,7 +84,7 @@ class Express {
     // call with new content
     callback(null, processContent)
   }
-​
+
   /**
    * PRIVATE
    */
@@ -98,9 +102,15 @@ class Express {
         const { method, url } = req
 ​
         const response: MyHttpResponse = this._overrideReponse(res)
-​
-        const route = this.routes[method].find(item => item.url === url)
+​        console.log(method);
+        console.log(url);
+        
+
+        const route = this.routes[method].find((item: {url: string}) => item.url === url)
+        console.log(this.routes); 
         if (!route) {
+          res.statusCode = 404;
+          res.end()
           return
         }
 ​
