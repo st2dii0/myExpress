@@ -18,14 +18,19 @@ app.get('/api', (req: MyHttpRequest, res: MyHttpResponse) => {
 
 app.post('/sign-up', (req: MyHttpRequest, res: MyHttpResponse) => {
   console.log('post sign-up');
+  res.json({ hello: 'From sign-up form' });
+
 })
 
 app.put('/update-login', (req: MyHttpRequest, res: MyHttpResponse) => {
   console.log('update login');
+  res.json({ hello: 'From update-login form' });
+
 })
 
 app.delete('/delete-login', (req: MyHttpRequest, res: MyHttpResponse) => {
   console.log('delete login');
+  res.json({ hello: 'From delete form' });
 })
 
 //Render
